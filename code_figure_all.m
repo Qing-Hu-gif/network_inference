@@ -61,8 +61,8 @@ r_one_dln_2000=r_one_dln;
 
 % % the redefined local response matrix: means and std
 % % use the 2000 data r_one_dln_2000 to analysis
-% load r_one_dln_2000.mat
-% r_one_dln=r_one_dln_2000;
+load r_one_dln_2000.mat
+r_one_dln=r_one_dln_2000;
 mean_r_one_dln0=cell(size(r_one_dln)); % the redefined local response matrix
 std_r_one_dln=cell(size(r_one_dln));
 for j=1:size(r_one_dln,2)
@@ -218,7 +218,7 @@ for i=1:size(ele,1)
     xla{i,4}=['$$\hat{r}_{',num2str(ele(i,2)),num2str(ele(i,3)),'}$$'];
     xla{i,5}=['$$\widetilde{r}_{',num2str(ele(i,2)),num2str(ele(i,3)),'}$$'];
     xla{i,6}=['$$L_{',num2str(ele(i,2)),num2str(ele(i,3)),'}$$'];
-    end
+end
 path1='E:\huqing\PhD\all_paper\a2_MRA\all_code\figure_all\fig\'; % the path for mat
 path2='E:\huqing\PhD\all_paper\a2_MRA\all_code\figure_all\eps\'; % the path for eps
 path3='E:\huqing\PhD\all_paper\a2_MRA\all_code\figure_all\jpg\'; % the path for jpg
@@ -280,7 +280,7 @@ for j=1:pt
         fill([rx(i,:),rx(i,end:-1:1)],[ry(i,:)+ytic(1,j),zeros(1,size(ry,2))+ytic(1,j)],...
             all_colors(i,:),'FaceAlpha',0.55,'EdgeAlpha',0,'EdgeColor','none')
         hold on
-        end
+    end
     hold on
 end
 set(gca,'Position',[0.045+0.32*(ks-1),0.11,0.266,0.815],'TickLabelInterpreter','latex');
